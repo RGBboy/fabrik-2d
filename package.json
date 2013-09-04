@@ -1,0 +1,22 @@
+{
+  "name": "fabrik",
+  "version": "0.0.1",
+  "private": true,
+  "description": "Implementation of the FABRIK: A fast, iterative solver for the Inverse Kinematics problem.",
+  "author": "RGBboy <me@rgbboy.com>",
+  "main": "index.js",
+  "engines": {
+    "node": ">=0.8.0"
+  },
+  "dependencies": {
+  },
+  "devDependencies": {
+    "ecstatic": "0.x.x",
+    "stack": "0.x.x",
+    "browserify": "2.x.x",
+    "domready": "0.x.x"
+  },
+  "scripts" : {
+    "start": "index.js"
+  }
+}
