@@ -28,7 +28,7 @@ function setup () {
 
   // Setup nodes
   nodes.push(new Node2d({ length: 50, x: 200, y: 200 }));
-  for (i = 1; i < 3; i += 1) {
+  for (i = 1; i <= 2; i += 1) {
     nodes.push(new Node2d({ length: 50 }));
     nodes[i-1].addChild(nodes[i]);
   };
