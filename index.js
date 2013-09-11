@@ -1,2 +1,2 @@
 
-exports = module.exports = require('./lib/fabrik');
+exports = module.exports = require('./lib/fabrik-2d');
