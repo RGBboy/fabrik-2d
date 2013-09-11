@@ -46,16 +46,27 @@ function setup () {
 function draw () {
   if (context) {
     context.clearRect(0,0,context.canvas.width, context.canvas.height);
-    context.save();
-    context.translate(200, 200)
+
     for (i = 0; i < nodes.length - 1; i += 1) {
+
+      context.save();
+
+      context.translate(nodes[i].position.get(0), nodes[i].position.get(1));
+
+      context.save();
+
+      if (nodes[i].parent) {
+        context.rotate(nodes[i].parent.rotation);
+      };
 
       context.strokeStyle = 'green';
       context.beginPath();
       context.arc(0, 0, 8, nodes[i].minRotation + Math.PI/2, nodes[i].maxRotation + Math.PI/2);
       context.stroke();
 
-      context.rotate(nodes[i].localRotation());
+      context.restore();
+
+      context.rotate(nodes[i].rotation);
 
       context.fillStyle = 'green';
       context.beginPath();
@@ -68,10 +79,9 @@ function draw () {
       context.lineTo(0, nodes[i].length);
       context.stroke();
 
-      context.translate(0, nodes[i].length);
+      context.restore();
 
     };
-    context.restore();
   };
 };
 
