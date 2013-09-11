@@ -2,7 +2,7 @@
   "name": "fabrik-2d",
   "version": "0.0.1",
   "private": true,
-  "description": "Implementation of the FABRIK 2D: A fast, iterative solver for the Inverse Kinematics problem.",
+  "description": "Implementation of the FABRIK in 2D: A fast, iterative solver for the Inverse Kinematics problem.",
   "author": "RGBboy <me@rgbboy.com>",
   "main": "index.js",
   "engines": {
